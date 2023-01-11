@@ -146,6 +146,8 @@
         document.getElementById("sum").value = sum;
         speak(additionModule.getElementsByTagName("h5")[0].textContent + " For Example Addition of " + parseInt(box1) + " and " + parseInt(box2) + " is " + parseInt(sum));
      
+
+        document.getElementById("+").value = sum;
     }
     function Sub() {
         let box3 = document.getElementById("box3").value;
@@ -153,6 +155,7 @@
         let sub = Number(box3) - Number(box4);
         document.getElementById("sub").value = sub;
         speak(subtractionModule.getElementsByTagName("h5")[0].textContent + "For Example Subtraction of " + parseInt(box3) + " and " + parseInt(box4) + " is " + parseInt(sub))
+        document.getElementById("-").value = sub;
     }
     function Mul() {
         let box5 = document.getElementById("box5").value;
@@ -173,7 +176,7 @@
         speechSynthesis.cancel();
         var msg = new SpeechSynthesisUtterance(message);
         var voices = window.speechSynthesis.getVoices();
-        msg.rate = 0.7;
+        msg.rate = 0.9;
         msg.pitch = 1.2;
         msg.voice = voices[3];
         window.speechSynthesis.speak(msg);
@@ -199,6 +202,7 @@
                 if (getContentId == $(this).attr("id")) {
                     $(this).removeClass('d-none');
                     $(this).addClass('d-block');
+                    // console.log(getContentId)
                 }
                 else {
                     $(this).addClass('d-none');
@@ -207,8 +211,7 @@
             })
         }
         speak("In this module we will learn about " + module[channelNumber - 1].textContent);
-    }
-
+        }
 </script>
 
 </html>
