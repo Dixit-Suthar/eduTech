@@ -47,17 +47,21 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseOne" aria-expanded="false"
                                 aria-controls="flush-collapseOne">
-                                Chapter 1
+                                <b>Chapter 1</b>
                             </button>
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse"
                             aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
                                 <ul class="list-group" id="module">
-                                    <li onclick="switchChannel(1)" id="additionItem" class="list-group-item">Addition</li>
-                                    <li onclick="switchChannel(2)" id="subtractionItem" class="list-group-item">Subtraction</li>
-                                    <li onclick="switchChannel(3)" id="multiplicationItem" class="list-group-item">Multiplication</li>
-                                    <li onclick="switchChannel(4)" id="divisionItem" class="list-group-item">Division</li>
+                                    <li onclick="switchChannel(1)" id="additionItem" class="list-group-item">Addition
+                                    </li>
+                                    <li onclick="switchChannel(2)" id="subtractionItem" class="list-group-item">
+                                        Subtraction</li>
+                                    <li onclick="switchChannel(3)" id="multiplicationItem" class="list-group-item">
+                                        Multiplication</li>
+                                    <li onclick="switchChannel(4)" id="divisionItem" class="list-group-item">Division
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -74,23 +78,55 @@
                     </div>
                     <div id="addition" class="d-none">
                         <h1>Addition</h1>
-                        <p>adding something, especially two or more numbers</p>
+                        <p>
+                        <h5>Addition in math is a process of combining two or more numbers. Addends are the numbers
+                            being added, and the result or the final answer we get after the process is called the sum.
+                        </h5>
+                        </p>
+
+                        <input type="text" id="box1" placeholder="Enter 1st Number">
+                        <input type="text" id="box2" placeholder="Enter 2nd Number"><br><br>
+                        <input type="button" value="Click Here to Calculate" onclick="Sum()"><br>
+                        <p>Result is: <br><input type="text" id="+"><br></p>
+
                     </div>
                     <div id="subtraction" class="d-none">
                         <h1>Subtraction</h1>
-                        <p>In math, to subtract means to take away from a group or a number of things. When we subtract,
-                            the number of things in the group reduces or becomes less.</p>
+                        <p>
+                        <h5>In math, to subtract means to take away from a group or a number of things. When we
+                            subtract,
+                            the number of things in the group reduces or becomes less.</h5>
+                        </p>
+                        <input type="text" id="box3" placeholder="Enter 1st Number"><br>
+                        <input type="text" id="box4" placeholder="Enter 2nd Number"><br>
+                        <input type="button" value="Click Here to Calculate" onclick="Sub()"><br>
+                        Result is : <input type="text" id="-"><br>
                     </div>
+
                     <div id="multiplication" class="d-none">
                         <h1>Multiplication</h1>
-                        <p>In mathematics, multiplication is a method of finding the product of two or more numbers. It
-                            is one of the basic arithmetic operations, that we use in everyday life.</p>
+                        <p>
+                        <h5>In mathematics, multiplication is a method of finding the product of two or more numbers. It
+                            is one of the basic arithmetic operations, that we use in everyday life.</h5>
+                        </p>
+
+                        <input type="text" id="box5" placeholder="Enter 1st Number"><br>
+                        <input type="text" id="box6" placeholder="Enter 2nd Number"><br>
+                        <input type="button" value="Click Here to Calculate" onclick="Mul()"><br>
+                        Result is : <input type="text" id="*"><br>
                     </div>
                     <div id="division" class="d-none">
                         <h1>Division</h1>
-                        <p> In maths, a division is a process of splitting a specific amount into equal parts. For
+                        <p>
+                        <h5>In maths, a division is a process of splitting a specific amount into equal parts. For
                             example, we can divide a group of 20 members into 4 groups of 5 members each or 5 groups of
-                            4 members each, and so on.</p>
+                            4 members each, and so on.</h5>
+                        </p>
+
+                        <input type="text" id="box7" placeholder="Enter 1st Number"><br>
+                        <input type="text" id="box8" placeholder="Enter 2nd Number"><br>
+                        <input type="button" value="Click Here to Calculate" onclick="Divi()"><br>
+                        Result is : <input type="text" id="/"><br>
                     </div>
                 </div>
             </div>
@@ -111,49 +147,74 @@
 
     speechSynthesis.addEventListener(' ', speak());
 
+    function Sum() {
+        let box1 = document.getElementById("box1").value;
+        let box2 = document.getElementById("box2").value;
+        let sum = Number(box1) + Number(box2);
+        document.getElementById("+").value = sum;
+    }
+    function Sub() {
+        let box3 = document.getElementById("box3").value;
+        let box4 = document.getElementById("box4").value;
+        let sub = Number(box3) - Number(box4);
+        document.getElementById("-").value = sub;
+    }
+    function Mul() {
+        let box5 = document.getElementById("box5").value;
+        let box6 = document.getElementById("box6").value;
+        let mul = Number(box5) * Number(box6);
+        document.getElementById("*").value = mul;
+    }
+    function Divi() {
+        let box7 = document.getElementById("box7").value;
+        let box8 = document.getElementById("box8").value;
+        let divi = Number(box7) / Number(box8);
+        document.getElementById("/").value = divi;
+    }
+
     function speak(message) {
         speechSynthesis.cancel();
         var msg = new SpeechSynthesisUtterance(message);
         var voices = window.speechSynthesis.getVoices();
-        msg.rate = 0.7;
+        msg.rate = 0.9;
         msg.pitch = 1.2;
         msg.voice = voices[3];
         window.speechSynthesis.speak(msg);
-        }
-    
-    function welcomeMsg(){
+    }
+
+    function welcomeMsg() {
         let txt1 = document.getElementById("default").getElementsByTagName("h1")[0].textContent;
         let txt2 = document.getElementById("default").getElementsByTagName("p")[0].textContent;
         let text = txt1 + " " + txt2;
         speak(text);
     }
-    
+
     function switchChannel(channelNumber) {
         // console.log(document.getElementById("screen").getElementsByTagName("div").attr("id"));
-        
-
 
         var module = document.getElementById("module").getElementsByTagName("li");
         var len = module.length;
         for (let i = 0; i < len; i++) {
-            let getContentId = String((module[channelNumber-1].id).split('I',1));
+            let getContentId = String((module[channelNumber - 1].id).split('I', 1));
             module[i].className = i + 1 == channelNumber ? "list-group-item active" : "list-group-item";
-            $("#screen").find("div").each(function() {
-                if(getContentId == $(this).attr("id")){
+
+            $("#screen").find("div").each(function () {
+                if (getContentId == $(this).attr("id")) {
                     $(this).removeClass('d-none');
                     $(this).addClass('d-block');
+                    console.log(getContentId)
                 }
-                else{
+                else {
                     $(this).addClass('d-none');
                     $(this).removeClass('d-block');
                 }
-        })
+            })
         }
         // let content = document.getElementById(getContentId).classList.add("d-block");
         // console.log(document.getElementById(getContentId));
         speak("In this module we will learn about " + module[channelNumber - 1].textContent);
-    }
 
+    }
 
 </script>
 
