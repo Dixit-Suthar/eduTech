@@ -93,10 +93,10 @@
                         <h5>In math, to subtract means to take away from a group or a number of things. When we
                             subtract,
                             the number of things in the group reduces or becomes less.</h5>
-                        <input type="text" id="box3" placeholder="Enter 1st Number"><br>
-                        <input type="text" id="box4" placeholder="Enter 2nd Number"><br>
+                        <input type="text" id="box3" placeholder="Enter 1st Number">
+                        <input type="text" id="box4" placeholder="Enter 2nd Number"><br><br>
                         <input type="button" value="Click Here to Calculate" onclick="Sub()"><br>
-                        Result is : <input type="text" id="sub"><br>
+                        Result is : <br><input type="text" id="sub"><br>
                     </div>
 
                     <div id="multiplication" class="d-none">
@@ -104,10 +104,10 @@
                         <h5>In mathematics, multiplication is a method of finding the product of two or more numbers. It
                             is one of the basic arithmetic operations, that we use in everyday life.</h5>
 
-                        <input type="text" id="box5" placeholder="Enter 1st Number"><br>
-                        <input type="text" id="box6" placeholder="Enter 2nd Number"><br>
+                        <input type="text" id="box5" placeholder="Enter 1st Number">
+                        <input type="text" id="box6" placeholder="Enter 2nd Number"><br><br>
                         <input type="button" value="Click Here to Calculate" onclick="Mul()"><br>
-                        Result is : <input type="text" id="mul"><br>
+                        Result is : <br><input type="text" id="mul"><br>
                     </div>
                     <div id="division" class="d-none">
                         <h1>Division</h1>
@@ -115,10 +115,10 @@
                             example, we can divide a group of 20 members into 4 groups of 5 members each or 5 groups of
                             4 members each, and so on.</h5>
 
-                        <input type="text" id="box7" placeholder="Enter 1st Number"><br>
-                        <input type="text" id="box8" placeholder="Enter 2nd Number"><br>
+                        <input type="text" id="box7" placeholder="Enter 1st Number">
+                        <input type="text" id="box8" placeholder="Enter 2nd Number"><br><br>
                         <input type="button" value="Click Here to Calculate" onclick="Divi()"><br>
-                        Result is : <input type="text" id="divi"><br>
+                        Result is : <br><input type="text" id="divi"><br>
                     </div>
                 </div>
             </div>
@@ -145,7 +145,7 @@
         let sum = Number(box1) + Number(box2);
         document.getElementById("sum").value = sum;
         speak(additionModule.getElementsByTagName("h5")[0].textContent + " For Example Addition of " + parseInt(box1) + " and " + parseInt(box2) + " is " + parseInt(sum));
-     
+
 
         document.getElementById("+").value = sum;
     }
@@ -211,7 +211,7 @@
             })
         }
         speak("In this module we will learn about " + module[channelNumber - 1].textContent);
-        }
+    }
 </script>
 
 </html>
