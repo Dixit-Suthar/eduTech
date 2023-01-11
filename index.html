@@ -127,16 +127,27 @@
         let text = txt1 + " " + txt2;
         speak(text);
     }
-
+    
     function switchChannel(channelNumber) {
+        // console.log(document.getElementById("screen").getElementsByTagName("div").attr("id"));
+        
+
 
         var module = document.getElementById("module").getElementsByTagName("li");
         var len = module.length;
-        
         for (let i = 0; i < len; i++) {
             let getContentId = String((module[channelNumber-1].id).split('I',1));
             module[i].className = i + 1 == channelNumber ? "list-group-item active" : "list-group-item";
-
+            $("#screen").find("div").each(function() {
+                if(getContentId == $(this).attr("id")){
+                    $(this).removeClass('d-none');
+                    $(this).addClass('d-block');
+                }
+                else{
+                    $(this).addClass('d-none');
+                    $(this).removeClass('d-block');
+                }
+        })
         }
         // let content = document.getElementById(getContentId).classList.add("d-block");
         // console.log(document.getElementById(getContentId));
