@@ -57,8 +57,13 @@
                                     <li onclick="switchChannel(1)" id="caesarCipherItem" class="list-group-item">
                                         Caesar&nbsp;Cipher
                                     </li>
+                                    <li onclick="switchChannel(2)" id="railfenceItem" class="list-group-item">
+                                        Rail Fence
+                                    </li>
                                 </ul>
+
                             </div>
+
                         </div>
                     </div>
 
@@ -71,6 +76,7 @@
                         <p>So let's start today's topic please select a module to continue</p>
                         <button class="btn btn-success" onclick="welcomeMsg()">Click Here</button>
                     </section>
+
                     <section id="caesarCipher" class="d-none">
                         <h1>Caesar Cipher</h1>
                         <p>If you want to listen description please click here
@@ -82,17 +88,40 @@
                             <br><br>
                             For Example:
                         </h5>
-                        <div class="content d-none">
-                                with a shift of 1, A would be replaced by B, B would become C, and so on. The method is
-                                apparently named after Julius Caesar, who apparently used it to communicate with his
-                                officials. Take a look at this image
-                                <img src="./images/ceaserCipher.png" >
-                        </div>
+                        <!-- <div class="content d-none"> -->
+                        with a shift of <b>3</b>, A would be replaced by D, B would become E, and so on. The method is
+                        apparently named after Julius Caesar, who apparently used it to communicate with his
+                        officials. Take a look at this image
+                        <br>
+                        <img src="./images/ceaserCipher.png">
+                        <!-- </div> -->
+                    </section>
 
-                    </div>
+                    <section id="railfence" class="d-none">
+                        <h1>Rail Fence</h1>
+                        <p>If you want to listen description please click here
+                            <button class="btn btn-secondary" onclick="read()">Click here</button>
+                        </p>
+                        <h5>In the rail fence cipher, the plaintext is written downwards diagonally on successive
+                            "rails"
+                            of an imaginary fence, then moving up when the bottom rail is reached, down again when the
+                            top rail is reached, and so on until the whole plaintext is written out. The ciphertext is
+                            then read off in rows.
+                            <br><br>
+                            For Example:
+                        </h5>
+
+                        <b>Plaintext :</b> T H I S I S A S E C R E T M E S S A G E
+                        <br>
+                        <img src="./images/railfence.png">
+                        <br>
+                        <b>Ciphertext :</b> T I I A E R T E S G H S S S C E M S A E
+                    </section>
+
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 
