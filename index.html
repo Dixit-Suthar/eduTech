@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en" allow="autoplay">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-flex">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <img src="images/book.png" width="30" height="24" class="d-inline-block align-text-top">
+                Edutech
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="float-end">
+                    <a class="btn btn-danger" href="#">Logout</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="accordion accordion-flush" id="accordionFlush">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne" id="sidebar">
+                                <b>Cryptography</b>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
+                            <div class="accordion-body">
+                                <ul class="list-group" id="module">
+                                    <li onclick="switchChannel(1)" id="caesarCipherItem" class="list-group-item">
+                                        Caesar&nbsp;Cipher
+                                    </li>
+                                    <li onclick="switchChannel(2)" id="railfenceItem" class="list-group-item">
+                                        Rail Fence
+                                    </li>
+                                    <li onclick="switchChannel(3)" id="monoalphabeticItem" class="list-group-item">
+                                        Monoalphabetic Cipher
+                                    </li>
+                                    <li onclick="switchChannel(4)" id="playfaircipherItem" class="list-group-item">
+                                        Playfair Cipher
+                                    </li>
+                                    <li onclick="switchChannel(5)" id="polyalphabeticsubstitutionItem"
+                                        class="list-group-item">
+                                        Polyalphabetic Substitution
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="container" id="screen">
+                    <section id="default" class="d-block">
+                        <h1>Welcome to our Class</h1>
+                        <p>So let's start today's topic please select a module to continue</p>
+                        <button class="btn btn-success" onclick="welcomeMsg()">Click Here</button>
+                    </section>
+
+                    <section id="caesarCipher" class="d-none">
+                        <h1>Caesar Cipher</h1>
+                        <p>If you want to listen description please click here
+                            <button class="btn btn-secondary" onclick="casearCiperSpeech()">Click here</button>
+                        </p>
+                        <h5>Ceaser Cipher is one of the tradition Cryptography technique. It is basic substituion method
+                            in which each character or
+                            letter of the plain text is replaced by a character or letter.
+                            By using some fixed number of position of the characters or alphabets or digits.
+                            <br><br>
+                            <a href="casearCiper.html" target="_blank" class="btn btn-info text-black50">Click here to
+                                get Casear Ciper Practice</a>
+                            <br><br>
+                            For Example:
+                        </h5>
+                        <!-- <div class="content d-none"> -->
+                        <div id="caesarCipherDesc">
+
+                            with a shift of <b>3</b>, A would be replaced by D, B would become E, and so on. The method
+                            is
+                            apparently named after Julius Caesar, who apparently used it to communicate with his
+                            officials. Take a look at this image
+                            <br>
+                            <img src="./images/ceaserCipher.png">
+                        </div>
+                        <!-- </div> -->
+                    </section>
+
+                    <section id="railfence" class="d-none">
+                        <h1>Rail Fence</h1>
+                        <p>If you want to listen description please click here
+                            <button class="btn btn-secondary" onclick="railFenceSpeech()">Click here</button>
+                        </p>
+                        <h5>Railfence cipher is known as zigzag cipher and it's one type of transposition cipher. Both
+                            encryption and decryption is
+                            performed which is analagous to a fence build with the horizontal rails during the process
+                            of encryption in rail fence cipher the plain text is written diagonally on succesive "rails"
+                            of an imaginary fence and then moving up when the bottom of the rail is reached. it then
+                            move downwards agin when the top rail is reached and ther process is continued untill the
+                            whole plain text is written out the cipher text is then read off in rows of a decryption
+                            process
+                            <br><br>
+                            Example is given below:
+                        </h5>
+
+                        <b>Plaintext :</b> T H I S I S A S E C R E T M E S S A G E
+                        <br>
+                        <b>Key: </b>2
+                        <br>
+                        <img src="./images/railfence.png">
+                        <br>
+                        <b>Ciphertext :</b> T I I A E R T E S G H S S S C E M S A E
+                    </section>
+
+                    <section id="monoalphabetic" class="d-none">
+                        <h1>Monoalphabetic Cipher</h1>
+                        <p>If you want to listen description please click here
+                            <!-- EDIT HERE -->
+                            <button class="btn btn-secondary" onclick="railFenceSpeech()">Click here</button>
+                        </p>
+                        <h5>A mono-alphabetic cipher (aka simple substitution cipher) is a substitution cipher where
+                            each letter of the plain text is replaced with another letter of the alphabet. It uses a
+                            fixed key which consist of the 26 letters of a “shuffled alphabet”.
+                            <br><br>
+                            Example is given below:
+                        </h5>
+                        <p>A simple example is where each letter is encrypted as the next letter in the alphabet: "a
+                            simple message" becomes "B TJNQMF NFTTBHF". In general, when performing a simple
+                            substitution manually, it is easiest to generate the ciphertext alphabet first, and encrypt
+                            by comparing this to the plaintext alphabet. The table below shows how one might choose to,
+                            and we will, lay them out for this example.
+                        </p>
+
+                        <b>Plaintext :</b> a simple message
+                        <br>
+                        <img src="./images/monoalpha">
+                        <br>
+                        <b>Ciphertext :</b> B TJNQMF NFTTBHF
+                    </section>
+
+                    <section id="playfaircipher" class="d-none">
+                        <h1>Playfair Cipher</h1>
+                        <p>If you want to listen description please click here
+                            <!-- EDIT HERE -->
+                            <button class="btn btn-secondary" onclick="railFenceSpeech()">Click here</button>
+                        </p>
+                        <h5>The Playfair cipher encryption technique can be used to encrypt or encode a message. It
+                            operates exactly like typical encryption. The only difference is that it encrypts a digraph,
+                            or a pair of two letters, as opposed to a single letter.
+                            <br><br>
+                            The Playfair cipher encryption technique can be used to encrypt or encode a message. It
+                            operates exactly like typical encryption. The only difference is that it encrypts a digraph,
+                            or a pair of two letters, as opposed to a single letter.
+                            <br><br>
+                            Example is given below:
+                        </h5>
+                        <p>
+                        </p>
+                        <b>Key :</b> monarchy<br>
+                        <b>Plaintext :</b> instruments
+                        <br><br>
+                        <p><b>1: Algorithm to encrypt the plain text:</b> The plaintext is split into pairs of two
+                            letters (digraphs). If there is an odd number of letters, a Z is added to the last letter.
+                            <br>After Split: 'in' 'st' 'ru' 'me' 'nt' 'sz'
+                            <br>&emsp;<b>NOTE: </b><br>
+                            &emsp;&emsp;<b>1.</b> Pair cannot be made with same letter. Break the letter in single
+                            and add a bogus letter to the previous letter.<br>
+                            &emsp;&emsp;&emsp;&emsp; Plain Text: “hello”<br>
+                            &emsp;&emsp;&emsp;&emsp; After Split: ‘he’ ‘lx’ ‘lo’<br>
+                            &emsp;&emsp;&emsp;&emsp; Here ‘x’ is the bogus letter.<br>
+                            &emsp;&emsp;<b>2.</b> If the letter is standing alone in the process of pairing, then add an
+                            extra bogus letter with the alone letter.
+                            <br>&emsp;&emsp;&emsp;&emsp;Plain Text: “helloe”
+                            <br>&emsp;&emsp;&emsp;&emsp;AfterSplit: ‘he’ ‘lx’ ‘lo’ ‘ez’
+                            <br>&emsp;&emsp;&emsp;&emsp;Here ‘z’ is the bogus letter.<br>
+                            <b>2: If both the letters are in the same column:</b>Take the letter below each one (going
+                            back to the top if at the bottom).<br>
+                            For example:<br>
+                            &emsp;Diagraph: "me"<br>
+                            &emsp;Encrypted Text: cl<br>
+                            &emsp;Encryption:<br>
+                            &emsp;&emsp;m -> c<br>
+                            &emsp;&emsp;e -> l<br>
+                            <img src="./images/pf1.png" style="height: 150px;"><br><br>
+
+                            <b>3: If both the letters are in the same row:</b> Take the letter to the right of each
+                            one (going back to the leftmost if at the rightmost position).<br>
+                            &emsp;For example:<br>
+                            &emsp;Diagraph: "st"<br>
+                            &emsp;Encrypted Text: tl<br>
+                            &emsp;Encryption:<br>
+                            &emsp;&emsp;s -> t<br>
+                            &emsp;&emsp;t -> l<br>
+                            <img src="./images/pf2.png" style="height: 150px;"><br><br>
+
+                            <b>4: If neither of the above rules is true:</b> Form a rectangle with the two letters and
+                            take the letters on the horizontal opposite corner of the rectangle.<br>
+                            For example:<br>
+                            &emsp;Diagraph: "nt"<br>
+                            &emsp;Encrypted Text: rq<br>
+                            &emsp;Encryption:<br>
+                            &emsp;&emsp;n -> r<br>
+                            &emsp;&emsp;t -> q<br>
+                            <img src="./images/pf3.png" style="height: 150px;"><br><br>
+
+                            <b>5: After all steps</b><br>
+                            Plain Text: "instrumentsz"<br>
+                            Encrypted Text: gatlmzclrqtx<br>
+                            Encryption:<br>
+                            &emsp;&emsp;i -> g<br>
+                            &emsp;&emsp;n -> a<br>
+                            &emsp;&emsp;s -> t<br>
+                            &emsp;&emsp;t -> l<br>
+                            &emsp;&emsp;r -> m<br>
+                            &emsp;&emsp;u -> z<br>
+                            &emsp;&emsp;m -> c<br>
+                            &emsp;&emsp;e -> l<br>
+                            &emsp;&emsp;n -> r<br>
+                            &emsp;&emsp;t -> q<br>
+                            &emsp;&emsp;s -> t<br>
+                            &emsp;&emsp;z -> x<br>
+                            <img src="./images/pf4.png" style="height: 250px;"><br>
+                        </p>
+                        <b>Ciphertext :</b> gatlmzclrqtx
+                    </section>
+
+                    <section id="polyalphabeticsubstitution" class="d-none">
+                        <h1>Polyalphabetic Substitution</h1>
+                        <p>If you want to listen description please click here
+                            <!-- EDIT HERE -->
+                            <button class="btn btn-secondary" onclick="railFenceSpeech()">Click here</button>
+                        </p>
+                        <h5>Monoalphabetic cipher encoded using only one fixed
+                            alphabet Polyalphabetic cipher is a substitution cipher in which the
+                            cipher alphabet for the plain alphabet may be different at
+                            different places during the encryption process.
+                            <br><br>
+                            Example is given below:
+                        </h5>
+                        <img src="./images/ps.png" style="height: 500px;"><br>
+                        <b>Keyword :</b> DECEPTIVE<br>
+                        <b>Key :</b> DECEPTIVEDECEPTIVEDECEPTIVE<br>
+                        <b>Plaintext :</b> WEAREDISCOVEREDSAVEYOURSELF<br>
+                        <b>Ciphertext :</b> ZICVTWQNGRZGVTWAVZHCQYGLMGJ<br>
+                        <br>
+                    </section>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/main.js"></script>
+
+</html>
+
+<!-- JAVASCRIPT IS IN DIFF -->

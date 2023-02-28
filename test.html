@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" allow="autoplay">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-flex">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <img src="images/book.png" width="30" height="24" class="d-inline-block align-text-top">
+                Edutech
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-4">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="float-end">
+                    <a class="btn btn-danger" href="#">Logout</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                <b>Cryptography</b>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul class="list-group" id="module">
+                                    <li onclick="switchChannel(1)" id="caesarCipherItem" class="list-group-item">
+                                        Caesar&nbsp;Cipher
+                                    </li>
+                                    <li onclick="switchChannel(2)" id="railfenceItem" class="list-group-item">
+                                        Rail Fence
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="container" id="screen">
+                    <section id="default" class="d-block">
+                        <h1>Welcome to our Class</h1>
+                        <p>So let's start today's topic please select a module to continue</p>
+                        <button class="btn btn-success" onclick="welcomeMsg()">Click Here</button>
+                    </section>
+
+                    <section id="caesarCipher" class="d-none">
+                        <h1>Caesar Cipher</h1>
+                        <p>If you want to listen description please click here
+                            <button class="btn btn-secondary" onclick="read()">Click here</button>
+                        </p>
+                        <h5>The Caesar Cipher technique is one of the earliest and simplest methods of encryption
+                            technique. It's simply a type of substitution cipher, i.e., each letter of a given text is
+                            replaced by a letter with a fixed number of positions down the alphabet.
+                            <br><br>
+                            For Example:
+                        </h5>
+                        <!-- <div class="content d-none"> -->
+                        with a shift of <b>3</b>, A would be replaced by D, B would become E, and so on. The method is
+                        apparently named after Julius Caesar, who apparently used it to communicate with his
+                        officials. Take a look at this image
+                        <br>
+                        <img src="./images/ceaserCipher.png">
+                        <!-- </div> -->
+                    </section>
+
+                    <section id="railfence" class="d-none">
+                        <h1>Rail Fence</h1>
+                        <p>If you want to listen description please click here
+                            <button class="btn btn-secondary" onclick="read()">Click here</button>
+                        </p>
+                        <h5>In the rail fence cipher, the plaintext is written downwards diagonally on successive
+                            "rails"
+                            of an imaginary fence, then moving up when the bottom rail is reached, down again when the
+                            top rail is reached, and so on until the whole plaintext is written out. The ciphertext is
+                            then read off in rows.
+                            <br><br>
+                            For Example:
+                        </h5>
+
+                        <b>Plaintext :</b> T H I S I S A S E C R E T M E S S A G E
+                        <br>
+                        <img src="./images/railfence.png">
+                        <br>
+                        <b>Ciphertext :</b> T I I A E R T E S G H S S S C E M S A E
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/main.js"></script>
+
+</html>
+
+<!-- JAVASCRIPT IS IN DIFF -->

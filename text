@@ -1,0 +1,6 @@
+Ceaser Cipher is one of the tradition Cryptography technique. It is basic substituion method in which each character or
+letter of the plain text is replaced by a character or letter.
+By using some fixed number of position of the characters or alphabets or digits.
+
+Railfence cipher is known as zigzag cipher and it's one type of transposition cipher. Both encryption and decryption is
+performed which is analagous to a fence build with the horizontal rails during the process of encryption in rail fence cipher the plain text is written diagonally on succesive "rails" of an imaginary fence and then moving  up when the bottom of the rail is reached. it then move downwards agin when the top rail is reached and ther process is continued untill the whole plain text is written out the cipher text is then read off in rows of a decryption process  
