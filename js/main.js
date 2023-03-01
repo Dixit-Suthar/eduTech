@@ -1,8 +1,12 @@
 var executed = false;
 //DOM ELements
+var defaultModule = document.getElementById("default");
+
 var caesarCipherModule = document.getElementById("caesarCipher");
 var railFence = document.getElementById("railfence");
-var defaultModule = document.getElementById("default");
+var monoalphabetic = document.getElementById("monoalphabetic");
+var playFair = document.getElementById("playfaircipher");
+var polyalphabeticSubstitution = document.getElementById("polyalphabeticsubstitution");
 
 speechSynthesis.addEventListener(' ', speak());
 
@@ -14,6 +18,18 @@ function railFenceSpeech() {
     speak(railFence.getElementsByTagName("h5")[0].textContent, ".content");
 }
 
+function monoalphabeticSpeech() {
+    speak(monoalphabetic.getElementsByTagName("h5")[0].textContent + monoalphabetic.getElementsByTagName("p")[1].textContent);
+}
+
+function playFairSpeech() {
+    speak(playFair.getElementsByTagName("h5")[0].textContent + playFair.getElementsByTagName("p")[1].textContent);
+}
+
+function polyalphabeticSubstitutionSpeech() {
+    speak(polyalphabeticSubstitution.getElementsByTagName("h5")[0].textContent);
+}
+
 function speak(message, element) {
     speechSynthesis.cancel();
     var msg = new SpeechSynthesisUtterance(message);
@@ -21,12 +37,7 @@ function speak(message, element) {
     var voices = window.speechSynthesis.getVoices();
     msg.rate = 1;
     msg.pitch = 1;
-    msg.voice = voices[1];
-        msg.onend = () => {
-            
-            var content = caesarCipherModule.querySelector(".content").textContent;
-            onSpeakEnd(element, content);
-    }
+    msg.voice = voices[3];
     window.speechSynthesis.speak(msg);
 }
 
@@ -65,5 +76,5 @@ function switchChannel(channelNumber) {
             }
         })
     }
-    speak("In this module we will learn about " + module[channelNumber - 1].textContent);
+    speak("In this module we will learn about " + module[channelNumber - 1].textContent + "If you want to listen description please click on the button");
 }
